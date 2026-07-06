@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "Demo",
+  "usingComponents": {
+    "uni-calendar": "../../uni_modules/uni-calendar/components/uni-calendar/uni-calendar",
+    "my-list": "../../components/my-list/my-list",
+    "my-nav": "../../components/my-nav/my-nav"
+  }
+}

@@ -1,0 +1,1 @@
+<view><text>Demo</text><navigator url="/pages/index/index" open-type="switchTab">跳转首页</navigator><navigator url="/packageA/info/info" open-type="navigate">跳转</navigator><uni-calendar u-i="45ac58c5-0" bind:__l="__l"></uni-calendar></view><my-list u-i="45ac58c5-1" bind:__l="__l"></my-list><my-nav u-i="45ac58c5-2" bind:__l="__l"></my-nav>

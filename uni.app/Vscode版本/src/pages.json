@@ -1,0 +1,51 @@
+{
+	// "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	// 	{
+	// 		"path": "pages/index/index",
+	// 		"style": {
+	// 			"navigationBarTitleText": "uni-app"
+	// 		}
+	// 	}
+	// ],
+	// "globalStyle": {
+	// 	"navigationBarTextStyle": "black",
+	// 	"navigationBarTitleText": "uni-app",
+	// 	"navigationBarBackgroundColor": "#F8F8F8",
+	// 	"backgroundColor": "#F8F8F8"
+	// },
+	{
+		"pages": [
+			{
+				"path": "pages/index/index",
+				"style": {
+					"navigationBarTitleText": "uni-app"
+				},
+				"needLogin": false // 当前页面是否需要登录才可以访问，此配置优先级高于uniIdRouter下的needLogin
+			}, {
+				"path": "pages/list/list",
+				"style": {
+					"navigationBarTitleText": "uni-app"
+				},
+				"needLogin": true
+			}, {
+				"path": "pages/detail/detail",
+				"style": {
+					"navigationBarTitleText": "uni-app"
+				}
+			}
+		],
+		"globalStyle": {
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "uni-app",
+			"navigationBarBackgroundColor": "#F8F8F8",
+			"backgroundColor": "#F8F8F8"
+		},
+		"uniIdRouter": {
+			"loginPage": "pages/index/index", // 登录页面路径
+			"needLogin": [
+				"pages/detail/.*" // 需要登录才可访问的页面列表，可以使用正则语法
+			],
+			"resToLogin": true // 自动解析云对象及clientDB的错误码，如果是客户端token不正确或token过期则自动跳转配置的登录页面，配置为false则关闭此行为，默认true
+		}
+	}
+}
